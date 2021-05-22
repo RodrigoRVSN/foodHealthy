@@ -75,7 +75,6 @@ export const InicioPesquisa = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    margin-top: 10vh;
     margin-bottom: 2vh;
     width: 80vw;
   }

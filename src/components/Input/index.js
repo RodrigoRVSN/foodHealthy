@@ -4,7 +4,7 @@ import { InputBody } from './styles';
 const Input = (props) => {
     return (
         <>
-            <InputBody placeholder={props.holder}/>
+            <InputBody type={props.type} placeholder={props.holder}/>
         </>
     );
 };

@@ -1,18 +1,24 @@
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaRegWindowClose } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import colors from '../../colors.json'
 
-export const Navbar = styled.nav`
-position: absolute;
+export const Navbar = styled.header`
   height: 12vh;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 200;
   position: relative;
-  `;
+
+  @media screen and (max-width: 960px) {
+    top: 0;
+    width: 100vw;
+    height: 12vh;
+    background-color: ${colors.colors.green};
+    position: fixed;
+  }
+`;
 
 export const LinkNavegacao = styled(Link)`
   color: ${colors.colors.white};
@@ -28,7 +34,7 @@ export const LinkNavegacao = styled(Link)`
   h2{
     font-size: 2rem;
     color: ${colors.colors.green};
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 960px) {
       color: ${colors.colors['dark-blue']};
     }
   }
@@ -38,7 +44,6 @@ export const LinkNavegacao = styled(Link)`
       color: ${colors.colors['dark-blue']};
       line-height: 1;
       height: 2rem;
-      margin-top: 1rem;
       font-size: 2rem;
       padding: 5vh 5vw; 
       text-align: center;
@@ -50,15 +55,27 @@ export const Bars = styled(FaBars)`
   color: ${colors.colors['dark-blue']};
   z-index: 101;
   @media screen and (max-width: 960px) {
-    background: ${colors.colors.gray};
-    width: 4rem;
-    height: 3rem;
+    display: ${({ open }) => open ? 'none' : 'block'};
+    width: 15vw;
+    height: 6vh;
     position: ${({ open }) => open ? 'fixed' : 'none'};
-    display: block;
     right: 8vw;
     transform: translate(-100%, 75%);
-    font-size: 1.8rem;
     cursor: pointer;
+  }
+`;
+
+export const Closes = styled(FaRegWindowClose)`
+  cursor: pointer;
+  transform: translate(-100%, 75%);
+  z-index: 101;
+  width: 15vw;
+  height: 6vh;
+  right: 8vw;
+  display: none;
+  @media screen and (max-width: 960px) {
+    display: ${({ open }) => open ? 'block' : 'none'};
+    color: ${colors.colors['dark-blue']};
   }
 `;
 

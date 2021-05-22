@@ -4,6 +4,7 @@ import colors from '../../colors.json'
 
 export const FooterDiv = styled.footer`
     background-color: ${colors.colors.white};
+    align-items: center;
     height: 10vh;
     padding: 0 3rem 0 3rem;
     display:flex;

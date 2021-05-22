@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCookies } from "react-cookie";
 import { FaArrowAltCircleLeft, FaRegArrowAltCircleRight, FaSearch } from "react-icons/fa";
 import BestRecipeCard from "../../components/BestRecipeCard";
 import BlogCard from "../../components/BlogCard";
@@ -25,13 +26,16 @@ export default function Home() {
         setScrollBlog(xRight);
     }
 
+    let contador = localStorage.getItem('iteracaoLogin');
+    const [cookies] = useCookies(['healthy']);
+
     /* Renderização do html */
     return (
         <>
             {/* Primeiro bloco */}
             <Inicio>
                 <InicioPesquisa>
-                    <h2>Ready for Trying a new recipe?</h2>
+                    <h2>Ready for Trying a new recipe {(contador === null) ? '' : (JSON.stringify(cookies[`healthy${contador}`].name).replace(/["]/g, ''))}?</h2>
                     <Search>
                         <Input holder={'Search healthy recipes'} />
                         <FaSearch color="#bfd200" />

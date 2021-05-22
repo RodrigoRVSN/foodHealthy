@@ -1,9 +1,12 @@
 import Routes from './routes';
+import { CookiesProvider } from 'react-cookie';
 
 function App() {
   return (
     <>
-      <Routes/>
+      <CookiesProvider>
+        <Routes />
+      </CookiesProvider>
     </>
   );
 }
