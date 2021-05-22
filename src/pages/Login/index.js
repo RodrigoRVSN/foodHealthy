@@ -58,7 +58,7 @@ export default function LoginPage() {
 
               <ToastContainer />
               <Button type="submit" onClick={() => submitted(values)} disabled={!isValid} >LOGIN</Button>
-              <a href="/cadastro"><h3>Não possui uma conta?</h3></a>
+              <a href="/cadastro"><h3>Don't have a account?</h3></a>
             </Form>
           )}
         />

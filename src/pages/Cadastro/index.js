@@ -77,7 +77,7 @@ export default function CadastroPage() {
           }}
           render={({ isValid, setFieldValue, values }) => (
             <Form>
-              <h2><span>CADASTRO</span></h2>
+              <h2><span>REGISTER</span></h2>
               <CadastroRow>
                 <label>NAME</label>
                 <Field name='name' type="text" placeholder='NAME' />
@@ -107,7 +107,7 @@ export default function CadastroPage() {
               <ToastContainer />
               <Button type="submit" onClick={() => submitted(values)} disabled={!isValid} >REGISTER</Button>
 
-              <a href="/login"><h3>Já possui uma conta?</h3></a>
+              <a href="/login"><h3>I has a account!</h3></a>
             </Form>
           )}
         />
