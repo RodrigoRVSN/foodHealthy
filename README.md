@@ -21,6 +21,7 @@ ________________________________________________________________________________
 - Responsividade facilitada
 - Fa icons para menu hambúrguer
 - API via cep que preenche automaticamente outros campos
+- Uso de cookies e localstorage para armazenamento de dados
 
 ___________________________________________________________________________________________________________________________________________________________________
 
